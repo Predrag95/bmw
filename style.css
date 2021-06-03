@@ -1,0 +1,206 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Public Sans', sans-serif;
+  position: relative;
+}
+header{
+  display: flex;
+  width: 80%;
+  margin: auto;
+  height: 10vh;
+  align-items: center;      
+}
+.logo_container, .nav_links, .search{
+  display: flex;
+}
+/* LOGO */
+.logo_container{
+  flex: 1;
+  position: relative;
+
+  animation-name: flag;
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.logo_logo{
+  width: 200px;
+
+  animation-name: logoAnimation;
+  animation-duration: 3000ms;
+}
+@keyframes logoAnimation{
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+/* NAV */
+nav{
+  flex: 2;
+
+  animation-name: navAnimation;
+  animation-duration: 1000ms;
+}
+@keyframes navAnimation{
+  0% { transform: translateY(-100px); }
+  100% { transform: translateY(0px); }
+}
+.nav_links{
+  outline: none;
+  list-style-type: none;
+  justify-content: space-evenly;
+}
+.nav_link{
+  outline: none;
+  border-radius: 7px;
+  padding: 15px;
+  text-decoration: none;
+  color: rgb(109, 108, 108);
+  font-size: 15px;
+  border: 1px solid rgb(209, 209, 209);
+  display: inline-block;
+
+  transition: 200ms;
+}
+.history{
+  transform: scale(1.2);
+  color: black;
+  border-color: black;
+  border-radius: 14px;
+  box-shadow: 5px 5px black;
+  background-color: #00a6cd;
+  color: white;
+  width: 80px;
+  text-align: center;
+}
+.news{
+  color: #25529f;
+  border: 1px solid #25529f;
+}
+.news:hover{
+  transform: scale(1.2);
+  color: black;
+  border-color: black;
+  border-radius: 14px;
+  box-shadow: 5px 5px black;
+  background-color: #25529f;
+  color: white;
+  width: 80px;
+  text-align: center;
+}
+.about{
+  color: #d82344;
+  border: 1px solid #d82344;
+}
+.about:hover{
+  transform: scale(1.2);
+  color: black;
+  border-color: black;
+  border-radius: 14px;
+  box-shadow: 5px 5px black;
+  background-color: #d82344;
+  color: white;
+  width: 80px;
+  text-align: center;
+}
+@keyframes historyAnimation{
+  0% {  }
+  50% {  }
+  100% {  }
+}
+/* SEARCh */
+.search{
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+}
+.facebook{
+  width: 8vh;
+  cursor: pointer;
+  margin-right: 7px;
+  transition: 200ms;
+}
+.facebook:hover{
+  transform: scale(1.2);
+  filter: drop-shadow(5px 5px black);
+}
+.instagram{
+  width: 5vh;
+  height: 5vh;
+  cursor: pointer;
+  transition: 200ms;
+}
+.instagram:hover{
+  transform: scale(1.2);
+  filter: drop-shadow(5px 5px black);
+}
+/* Background Img */
+.background_img img{
+  width: 97%;
+}
+.background_img{
+  position: absolute;
+  z-index: -1;
+  top: 17%;
+  left: 46%;
+  opacity: 0.3;
+
+  animation-name: show;
+  animation-duration: 700ms;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+@keyframes show{
+  0% { transform: translateY(800px); }
+  100% { transform: translateY(0px); }
+}
+/* Main */
+.main{
+  padding-top: 50px;
+  width: 77%;
+  margin: 0 auto;
+  position: relative;
+  height: 90vh;
+}
+.main_text{
+  width: 40%;
+  border-radius: 20px;
+  padding: 50px;
+  position: relative;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0), rgba(255, 0, 0, 1));
+
+  animation-name: main;
+  animation-duration: 700ms;
+  animation-timing-function: ease-out;
+}
+@keyframes main{
+  0% { transform: translateY(1000px); }
+  100% { transform: translateY(0); }
+}
+.white{
+  color: white;
+}
+.black{
+  color: black;
+}
+span h1{
+  font-size: 100px;
+  color: #d82344;
+  background-image: url("drawn.png");
+  background-size: cover;
+  background-position: center;
+  background-size: 500px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding-bottom: 30px;
+  position: relative;
+
+  animation-name: h1;
+  animation-duration: 1100ms;
+}
+@keyframes h1{
+  0% { transform: translateY(-70px); opacity: 0; visibility: hidden; }
+  100% { transform: translateY(0px); opacity: 1; visibility: visible; }
+}
